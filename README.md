@@ -1,5 +1,8 @@
 # Utilities for OpenStack Stackalytics Data
 
+Note that all utilities have been written using Python 3.5 and
+haven't been testing using Python 2.x.
+
 ## StackAlytics Contribution Puller (sa_contribution.py)
 
 This utility retrieves OpenStack contributions in CSV format, given
@@ -16,20 +19,20 @@ You can filter by OpenStack release name and/or a date range.  If you
 specify neither, you'll get the date range spanning from July 23, 2015
 (the birthday of OSIC) to today.
 
-```bash
+```
 usage: sa_contribution.py [-h] [-s START_DATE] [-e END_DATE] [-r RELEASE_NAME]
-                          [-i IDFILE_NAME] [-o OUTFILE_NAME]
+                          [-l IDFILE_NAME] [-o OUTFILE_NAME]
 
 optional arguments:
   -h, --help            show this help message and exit
   -s START_DATE, --start START_DATE
-                        Start Date (YYYYMMDD
+                        Start Date (YYYYMMDD)
   -e END_DATE, --end END_DATE
-                        End Date (YYYYMMDD
+                        End Date (YYYYMMDD)
   -r RELEASE_NAME, --release RELEASE_NAME
                         OpenStack Release Name
-  -i IDFILE_NAME, --id-file IDFILE_NAME
-                        Name of file containing launchpad ids
+  -l IDFILE_NAME, --id-file IDFILE_NAME
+                        Name of file containing launchpad ids (one per line)
   -o OUTFILE_NAME, --output OUTFILE_NAME
                         Output CSV file name (defaults to stdout)
 ```

@@ -73,8 +73,9 @@ def pull_contributions(start_date: str, end_date: str, release_name: str,
     # cycle
     lpad_ids = []
     with open(idfile_name) as ids:
-        for token in ids:
-            lpad_ids.append(token)
+        csvreader = csv.reader(ids)
+        for row in csvreader:
+            lpad_ids.append(row[0])
 
     results = []
     parms = {}
@@ -154,12 +155,12 @@ if __name__ == '__main__':
 
 
     parser = argparse.ArgumentParser(description=app_desc)
-    parser.add_argument('-s', '--start', dest='start_date', help='Start Date (YYYYMMDD')
-    parser.add_argument('-e', '--end', dest='end_date', help='End Date (YYYYMMDD')
+    parser.add_argument('-s', '--start', dest='start_date', help='Start Date (YYYYMMDD)')
+    parser.add_argument('-e', '--end', dest='end_date', help='End Date (YYYYMMDD)')
     parser.add_argument('-r', '--release', dest='release_name', help='OpenStack Release Name')
-    parser.add_argument('-i', '--id-file', dest='idfile_name',
+    parser.add_argument('-l', '--id-file', dest='idfile_name',
                         default='./launchpad_ids.csv',
-                        help='Name of file containing launchpad ids')
+                        help='Name of file containing launchpad ids (one per line)')
     parser.add_argument('-o', '--output', dest='outfile_name',
                         help='Output CSV file name (defaults to stdout)')
 
