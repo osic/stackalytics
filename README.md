@@ -53,5 +53,7 @@ contributions.
 
 (TBD) This utility takes the output of sa_contribution.py and generates
 useful subtotals.  Not uploaded yet -- in the meantime, just generate
-subtotals in a spreadsheet with the CSV output from sa_contribution.py.
+subtotals in a spreadsheet with the CSV output from sa_contribution.py
+(you'll need to use Excel's VLOOKUP formula and the OSIC Roster spreadsheet
+to link the launchpad ids here with their Projects, Company, etc.
 
