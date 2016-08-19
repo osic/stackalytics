@@ -1,7 +1,7 @@
 # Utilities for OpenStack Stackalytics Data
 
 Note that all utilities have been written using Python 3.5 and
-haven't been testing using Python 2.x.
+haven't been tested using Python 2.x.
 
 ## StackAlytics Contribution Puller (sa_contribution.py)
 
@@ -52,4 +52,6 @@ contributions.
 ## Contribution Data Summarizer (sa_grouper.py)
 
 (TBD) This utility takes the output of sa_contribution.py and generates
-useful subtotals.  Not uploaded yet.
+useful subtotals.  Not uploaded yet -- in the meantime, just generate
+subtotals in a spreadsheet with the CSV output from sa_contribution.py.
+
